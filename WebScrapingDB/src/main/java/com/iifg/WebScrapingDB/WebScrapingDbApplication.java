@@ -8,6 +8,5 @@ public class WebScrapingDbApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(WebScrapingDbApplication.class, args);
-	}
-
+	} 
 }

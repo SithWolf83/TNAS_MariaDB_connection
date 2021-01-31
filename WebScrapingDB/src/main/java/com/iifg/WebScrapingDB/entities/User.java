@@ -1,4 +1,4 @@
-package com.iifg.Entities;
+package com.iifg.WebScrapingDB.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

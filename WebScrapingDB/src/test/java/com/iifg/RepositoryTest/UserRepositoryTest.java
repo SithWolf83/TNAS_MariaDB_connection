@@ -11,8 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.iifg.Entities.User;
-import com.iifg.Repositories.UserRepository;
+import com.iifg.WebScrapingDB.entities.User;
+import com.iifg.WebScrapingDB.repositories.UserRepository;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
