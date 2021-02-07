@@ -17,12 +17,16 @@ public class User implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
-	@Column(name="username")
+	@Column(name="Username")
 	private String username;
-	@Column(name="password")
+	@Column(name="Password")
 	private String password;
-	@Column(name="email")
+	@Column(name="Email")
 	private String email;
+	@Column(name="EU_Citizen")
+	private boolean EU_Citizen;	
+	@Column(name="Nationallity")
+	private String nationallity;
 	
 	public User(){
 		
@@ -65,10 +69,25 @@ public class User implements Serializable {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	public boolean isEU_Citizen() {
+		return EU_Citizen;
+	}
+
+	public void setEU_Citizen(boolean eU_Citizen) {
+		EU_Citizen = eU_Citizen;
+	}
+
+	public String getNationallity() {
+		return nationallity;
+	}
+
+	public void setNationallity(String nationallity) {
+		this.nationallity = nationallity;
+	}
 
 	@Override
 	public String toString() {		
 		return "User{" + username + ", " + password + ", " + email + "}";
-	}
-	
+	}	
 }
