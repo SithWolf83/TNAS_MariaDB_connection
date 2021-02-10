@@ -1,6 +1,7 @@
 package com.iifg.WebScrapingDB.entities;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,7 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Travel_Recommendations")
+@Table(name = "TRAVEL_RECOMMENDATIONS")
 public class TravelRecommendations implements Serializable{
 
 	private static final long serialVersionUID = 1L;
@@ -33,6 +34,8 @@ public class TravelRecommendations implements Serializable{
 	private String otherInformation;
 	@Column(name="Other_Phones_Interest")
 	private String addressesPhonesInterest;
+	@Column(name="Last_Update")
+	private Date lastUpdate;
 	
 	public TravelRecommendations() {
 		
@@ -100,5 +103,21 @@ public class TravelRecommendations implements Serializable{
 
 	public void setAddressesPhonesInterest(String addressesPhonesInterest) {
 		this.addressesPhonesInterest = addressesPhonesInterest;
+	}
+
+	public Date getLastUpdate() {
+		return lastUpdate;
+	}
+
+	public void setLastUpdate(Date lastUpdate) {
+		this.lastUpdate = lastUpdate;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 }

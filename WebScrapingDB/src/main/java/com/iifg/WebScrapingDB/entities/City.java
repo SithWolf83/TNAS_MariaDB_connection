@@ -10,15 +10,14 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "City")
+@Table(name = "CITY")
 public class City implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer id;
 	@Column(name="City_Id")
-	private int cityId;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer cityId;
 	@Column(name="City_Name")
 	private String cityName;
 	@Column(name="Country_Id")
@@ -27,15 +26,7 @@ public class City implements Serializable{
 	public City() {
 		
 	}
-
-	public int getCityId() {
-		return cityId;
-	}
-
-	public void setCityId(int cityId) {
-		this.cityId = cityId;
-	}
-
+	
 	public String getCityName() {
 		return cityName;
 	}
@@ -50,6 +41,14 @@ public class City implements Serializable{
 
 	public void setCountryId(int countryId) {
 		this.countryId = countryId;
-	}	
+	}
+
+	public Integer getCityId() {
+		return cityId;
+	}
+
+	public void setCityId(Integer cityId) {
+		this.cityId = cityId;
+	}
 	
 }

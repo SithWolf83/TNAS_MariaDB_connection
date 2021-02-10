@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Use_EU_Medical_Card")
+@Table(name = "USE_UE_MEDICAL_CARD")
 public class UseEUMedicalCard implements Serializable{
 
 	private static final long serialVersionUID = 1L;
@@ -19,8 +19,6 @@ public class UseEUMedicalCard implements Serializable{
 	private Integer id;
 	@Column(name="Country_Id")
 	private int countryId;
-	@Column(name="Country_Name")
-	private String countryName;
 	@Column(name="Emergencies")
 	private String emergencies;
 	@Column(name="Medical_Coverage")
@@ -56,14 +54,6 @@ public class UseEUMedicalCard implements Serializable{
 
 	public void setCountryId(int countryId) {
 		this.countryId = countryId;
-	}
-
-	public String getCountryName() {
-		return countryName;
-	}
-
-	public void setCountryName(String countryName) {
-		this.countryName = countryName;
 	}
 
 	public String getEmergencies() {

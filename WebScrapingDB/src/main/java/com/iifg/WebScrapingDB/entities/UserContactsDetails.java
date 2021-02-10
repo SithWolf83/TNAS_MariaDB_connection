@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "User_Contact_Details")
+@Table(name = "USER_CONTACT_DETAILS")
 public class UserContactsDetails implements Serializable{
 
 	private static final long serialVersionUID = 1L;
@@ -70,6 +70,14 @@ public class UserContactsDetails implements Serializable{
 
 	public void setContactPhone(String contactPhone) {
 		this.contactPhone = contactPhone;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 	
 	

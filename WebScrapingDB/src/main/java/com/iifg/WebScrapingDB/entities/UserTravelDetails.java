@@ -11,7 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "User_Trip_Details")
+@Table(name = "USER_TRIP_DETAILS")
 public class UserTravelDetails implements Serializable{
 
 	private static final long serialVersionUID = 1L;
@@ -61,6 +61,14 @@ public class UserTravelDetails implements Serializable{
 
 	public void setCityId(int cityId) {
 		this.cityId = cityId;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 	
 	

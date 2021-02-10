@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Spanish_Embassy_Phones")
+@Table(name = "SPANISH_EMBASSY_PHONES")
 public class SpanishEmbassyPhones implements Serializable{
 
 	private static final long serialVersionUID = 1L;
@@ -19,16 +19,14 @@ public class SpanishEmbassyPhones implements Serializable{
 	private Integer id;
 	@Column(name="Country_Id")
 	private int countryId;
-	@Column(name="Country_Name")
-	private String countryName;
 	@Column(name="Embassy")
 	private boolean embassy;
 	@Column(name="Consulate")
 	private boolean consulate;
-	@Column(name="City_Name")
-	private String cityName;
 	@Column(name="Phone")
 	private String phone;
+	@Column(name="Direction")
+	private String direction;
 	
 	public SpanishEmbassyPhones() {
 		
@@ -40,14 +38,6 @@ public class SpanishEmbassyPhones implements Serializable{
 
 	public void setCountryId(int countryId) {
 		this.countryId = countryId;
-	}
-
-	public String getCountryName() {
-		return countryName;
-	}
-
-	public void setCountryName(String countryName) {
-		this.countryName = countryName;
 	}
 
 	public boolean isEmbassy() {
@@ -66,14 +56,6 @@ public class SpanishEmbassyPhones implements Serializable{
 		this.consulate = consulate;
 	}
 
-	public String getCityName() {
-		return cityName;
-	}
-
-	public void setCityName(String cityName) {
-		this.cityName = cityName;
-	}
-
 	public String getPhone() {
 		return phone;
 	}
@@ -81,5 +63,22 @@ public class SpanishEmbassyPhones implements Serializable{
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+
+	public String getDirection() {
+		return direction;
+	}
+
+	public void setDirection(String direction) {
+		this.direction = direction;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	
 	
 }

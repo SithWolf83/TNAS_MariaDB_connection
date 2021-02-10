@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Country_Details")
+@Table(name = "COUNTRY_DETAILS")
 public class CountryDetails implements Serializable{
 
 	private static final long serialVersionUID = 1L;
@@ -121,4 +121,14 @@ public class CountryDetails implements Serializable{
 	public void setVaccinesRecommended(String vaccinesRecommended) {
 		this.vaccinesRecommended = vaccinesRecommended;
 	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	
+	
 }

@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Traveller_Recommendations")
+@Table(name = "TRAVELLER_RECOMMENDATIONS")
 public class TravellerRecommendations implements Serializable{
 
 	private static final long serialVersionUID = 1L;
@@ -120,5 +120,13 @@ public class TravellerRecommendations implements Serializable{
 
 	public void setTipsAftTrip(String tipsAftTrip) {
 		this.tipsAftTrip = tipsAftTrip;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 }

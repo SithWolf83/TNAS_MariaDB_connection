@@ -11,7 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "MeteoAlarm")
+@Table(name = "METEOALARM")
 public class MeteoAlarm implements Serializable{
 
 	private static final long serialVersionUID = 1L;
@@ -20,10 +20,8 @@ public class MeteoAlarm implements Serializable{
 	private Integer id;
 	@Column(name="Country_Id")
 	private int countryId;
-	@Column(name="Country_Name")
-	private String countryName;
-	@Column(name="City_Name")
-	private String cityName;
+	@Column(name="City_Id")
+	private int cityId;
 	@Column(name="From_Day")
 	private Date fromDay;
 	@Column(name="To_Day")
@@ -47,20 +45,12 @@ public class MeteoAlarm implements Serializable{
 		this.countryId = countryId;
 	}
 
-	public String getCountryName() {
-		return countryName;
+	public int getCityId() {
+		return cityId;
 	}
 
-	public void setCountryName(String countryName) {
-		this.countryName = countryName;
-	}
-
-	public String getCityName() {
-		return cityName;
-	}
-
-	public void setCityName(String cityName) {
-		this.cityName = cityName;
+	public void setCityName(int cityId) {
+		this.cityId = cityId;
 	}
 
 	public Date getFromDay() {
@@ -102,4 +92,18 @@ public class MeteoAlarm implements Serializable{
 	public void setAlertMessage(String alertMessage) {
 		this.alertMessage = alertMessage;
 	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public void setCityId(int cityId) {
+		this.cityId = cityId;
+	}
+	
+	
 }

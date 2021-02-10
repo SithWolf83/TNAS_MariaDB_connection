@@ -10,13 +10,14 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "User")
+@Table(name = "USER")
 public class User implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	@Id
+	@Column(name="UserId")
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer id;
+	private Integer userId;
 	@Column(name="Username")
 	private String username;
 	@Column(name="Password")
@@ -25,8 +26,8 @@ public class User implements Serializable {
 	private String email;
 	@Column(name="EU_Citizen")
 	private boolean EU_Citizen;	
-	@Column(name="Nationallity")
-	private String nationallity;
+	@Column(name="Country_Id")
+	private int countryId;
 	
 	public User(){
 		
@@ -36,14 +37,6 @@ public class User implements Serializable {
 		this.username = username;
 		this.password = password;
 		this.email = email;
-	}
-	
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
 	}
 
 	public String getUsername() {
@@ -78,12 +71,20 @@ public class User implements Serializable {
 		EU_Citizen = eU_Citizen;
 	}
 
-	public String getNationallity() {
-		return nationallity;
+	public Integer getUserId() {
+		return userId;
 	}
 
-	public void setNationallity(String nationallity) {
-		this.nationallity = nationallity;
+	public void setUserId(Integer userId) {
+		this.userId = userId;
+	}
+
+	public int getCountryId() {
+		return countryId;
+	}
+
+	public void setCountryId(int countryId) {
+		this.countryId = countryId;
 	}
 
 	@Override
