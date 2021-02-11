@@ -34,6 +34,17 @@ public class InfoServicesController {
 	}
 	
 	/**
+	 * Cleans a year old registers
+	 * @return
+	 */
+	@GetMapping("/earthquakes/cleanyearly")
+	public @ResponseBody String cleanYearlyEarthquakes() {
+		String result = "";
+		//**********************************
+		return result;		
+	}
+	
+	/**
 	 * Updates emergency phones by country
 	 * @return
 	 */
