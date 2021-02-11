@@ -18,19 +18,15 @@ public class Country implements Serializable{
 	@Column(name="Country_Id")
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer countryId;
-	@Column(name="Country_Name")
-	private String countryName;
+	@Column(name="Country_Eng_Name")
+	private String countryEngName;
+	@Column(name="Country_Spa_Name")
+	private String countrySpaName;
 	@Column(name="EU_Country")
 	private boolean euCountry;
 	
 	public Country() {
 		
-	}
-	public String getCountryName() {
-		return countryName;
-	}
-	public void setCountryName(String countryName) {
-		this.countryName = countryName;
 	}
 	public boolean isEuCountry() {
 		return euCountry;
@@ -43,8 +39,17 @@ public class Country implements Serializable{
 	}
 	public void setCountryId(Integer countryId) {
 		this.countryId = countryId;
+	}
+	public String getCountryEngName() {
+		return countryEngName;
+	}
+	public void setCountryEngName(String countryEngName) {
+		this.countryEngName = countryEngName;
+	}
+	public String getCountrySpaName() {
+		return countrySpaName;
+	}
+	public void setCountrySpaName(String countrySpaName) {
+		this.countrySpaName = countrySpaName;
 	}	
-	
-	
-	
 }
