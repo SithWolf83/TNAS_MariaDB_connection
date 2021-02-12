@@ -22,6 +22,8 @@ public class Country implements Serializable{
 	private String countryEngName;
 	@Column(name="Country_Spa_Name")
 	private String countrySpaName;
+	@Column(name="Capital_Name")
+	private String capitalName;
 	@Column(name="EU_Country")
 	private boolean euCountry;
 	
@@ -51,5 +53,17 @@ public class Country implements Serializable{
 	}
 	public void setCountrySpaName(String countrySpaName) {
 		this.countrySpaName = countrySpaName;
-	}	
+	}
+	public String getCapitalName() {
+		return capitalName;
+	}
+	public void setCapitalName(String capitalName) {
+		this.capitalName = capitalName;
+	}
+	@Override
+	public String toString() {
+		return "Country [countryEngName=" + countryEngName + ", countrySpaName=" + countrySpaName + ", capitalName="
+				+ capitalName + ", euCountry=" + euCountry + "]";
+	}
+	
 }
