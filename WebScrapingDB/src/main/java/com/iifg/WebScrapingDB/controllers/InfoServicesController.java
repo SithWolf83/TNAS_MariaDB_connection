@@ -1,14 +1,28 @@
 package com.iifg.WebScrapingDB.controllers;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.iifg.WebScrapingDB.dbservices.countries.CountryScrapper;
+import com.iifg.WebScrapingDB.entities.Country;
+import com.iifg.WebScrapingDB.repositories.CountryRepository;
+
 @Controller
 @RequestMapping("/update")
 public class InfoServicesController {
+	
+	private CountryRepository countryRepo;
 
+	@Autowired
+	public InfoServicesController(CountryRepository countryRepo) {
+		this.countryRepo = countryRepo;
+	}
+	
 	/**
 	 * Updates Meteo Alarms
 	 * 
@@ -98,6 +112,7 @@ public class InfoServicesController {
 	@GetMapping("/travellerrecommendations")
 	public @ResponseBody String updateTravellerRecommendations() {
 		String result = "";
+		
 		//**********************************
 		return result;		
 	}
@@ -126,7 +141,38 @@ public class InfoServicesController {
 		return result;		
 	}
 	
+	/**
+	 * Updates use of EU Health Card by country
+	 * @return
+	 */
+	@GetMapping("/euhealthcard")
+	public @ResponseBody String updateUseEUHealthCard() {
+		String result = "";
+		//**********************************
+		return result;
+	}
 	
-	
-	
+	/**
+	 * Fills COUNTRY Table
+	 * @return
+	 */
+	@GetMapping("/fillcountries")
+	public @ResponseBody String fillCountriesTable() {
+		boolean result = false;
+		
+		CountryScrapper countryScrapper = new CountryScrapper();
+		List<Country> countryList = countryScrapper.scrapper();
+		if(!countryList.isEmpty()) {
+			for (Country country : countryList) {
+				countryRepo.save(country);
+			}
+			result = true;
+		}
+		if (result) {
+			return "Table filled";
+		} else {
+			return "There was an error.";
+		}
+		
+	}
 }
