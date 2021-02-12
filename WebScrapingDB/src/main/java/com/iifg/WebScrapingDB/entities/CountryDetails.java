@@ -17,25 +17,25 @@ public class CountryDetails implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
-	@Column(name="Country_Id")
+	@Column(name="Country_Id", nullable = false, columnDefinition = "varchar(50)")
 	private int countryId;
-	@Column(name="Capital")
+	@Column(name="Capital", nullable = false, columnDefinition = "varchar(50)")
 	private String capital;
-	@Column(name="Altitude")
+	@Column(name="Altitude", nullable = false, columnDefinition = "varchar(50)")
 	private String altitude;
-	@Column(name="Language")
+	@Column(name="Language", nullable = false, columnDefinition = "varchar(50)")
 	private String language;
-	@Column(name="Population")
+	@Column(name="Population", nullable = false, columnDefinition = "varchar(50)")
 	private String population;
-	@Column(name="Currency")
+	@Column(name="Currency", nullable = false, columnDefinition = "varchar(50)")
 	private String currency;
-	@Column(name="Time_Zone")
+	@Column(name="Time_Zone", nullable = false, columnDefinition = "varchar(50)")
 	private String timeZone;
-	@Column(name="Weather")
+	@Column(name="Weather", nullable = false, columnDefinition = "TEXT")
 	private String weather;
-	@Column(name="Vaccines_Required")
+	@Column(name="Vaccines_Required", nullable = false, columnDefinition = "TEXT")
 	private String vaccinesRequired;
-	@Column(name="Vaccines_Recommended")
+	@Column(name="Vaccines_Recommended", nullable = false, columnDefinition = "TEXT")
 	private String vaccinesRecommended;
 	
 	public CountryDetails() {

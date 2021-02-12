@@ -18,9 +18,9 @@ public class City implements Serializable{
 	@Column(name="City_Id")
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer cityId;
-	@Column(name="City_Name")
+	@Column(name="City_Name", nullable = false, columnDefinition = "varchar(50)")
 	private String cityName;
-	@Column(name="Country_Id")
+	@Column(name="Country_Id", nullable = false)
 	private int countryId;
 	
 	public City() {

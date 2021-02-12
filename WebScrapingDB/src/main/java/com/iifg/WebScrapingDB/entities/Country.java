@@ -18,13 +18,13 @@ public class Country implements Serializable{
 	@Column(name="Country_Id")
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer countryId;
-	@Column(name="Country_Eng_Name")
+	@Column(name="Country_Eng_Name", nullable = false, columnDefinition = "varchar(50)")
 	private String countryEngName;
-	@Column(name="Country_Spa_Name")
+	@Column(name="Country_Spa_Name", nullable = false, columnDefinition = "varchar(50)")
 	private String countrySpaName;
-	@Column(name="Capital_Name")
+	@Column(name="Capital_Name", nullable = false, columnDefinition = "varchar(50)")
 	private String capitalName;
-	@Column(name="EU_Country")
+	@Column(name="EU_Country", nullable = false, columnDefinition = "default false")
 	private boolean euCountry;
 	
 	public Country() {

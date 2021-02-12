@@ -18,17 +18,17 @@ public class Covid19Disease implements Serializable{
 	@Column(name="Id")
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
-	@Column(name="Country_Id")
+	@Column(name="Country_Id", nullable = false)
 	private int countryId;
-	@Column(name="Cases_Total")
+	@Column(name="Cases_Total", nullable = false)
 	private int casesTotal;
-	@Column(name="Cases_Last24h")
+	@Column(name="Cases_Last24h", nullable = false)
 	private int casesLast24h;
-	@Column(name="Deaths_Total")
+	@Column(name="Deaths_Total", nullable = false)
 	private int deathsTotal;
-	@Column(name="Deaths_Last24h")
+	@Column(name="Deaths_Last24h", nullable = false)
 	private int deathsLast24h;
-	@Column(name="Transmission_Classification")
+	@Column(name="Transmission_Classification", nullable = false)
 	private int transClassification;
 	
 	public Covid19Disease() {

@@ -19,21 +19,21 @@ public class UseEUMedicalCard implements Serializable{
 	private Integer id;
 	@Column(name="Country_Id")
 	private int countryId;
-	@Column(name="Emergencies")
+	@Column(name="Emergencies", columnDefinition = "TEXT")
 	private String emergencies;
-	@Column(name="Medical_Coverage")
+	@Column(name="Medical_Coverage", columnDefinition = "TEXT")
 	private String medicalCoverage;
-	@Column(name="Medical_Refund")
+	@Column(name="Medical_Refund", columnDefinition = "TEXT")
 	private String medicalRefund;
-	@Column(name="Medical_Copay")
+	@Column(name="Medical_Copay", columnDefinition = "TEXT")
 	private String medicalCopay;
-	@Column(name="Special_Treatments")
+	@Column(name="Special_Treatments", columnDefinition = "TEXT")
 	private String specialTreatments;
-	@Column(name="Requests")
+	@Column(name="Requests", columnDefinition = "TEXT")
 	private String requests;
-	@Column(name="Places")
+	@Column(name="Places", columnDefinition = "TEXT")
 	private String places;
-	@Column(name="Lost_Substraction")
+	@Column(name="Lost_Substraction", columnDefinition = "TEXT")
 	private String lostSubstracion;
 	
 	public UseEUMedicalCard() {

@@ -18,23 +18,23 @@ public class TravelRecommendations implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
-	@Column(name="Country_Id")
+	@Column(name="Country_Id", nullable = false)
 	private String countryId;
-	@Column(name="Important_Notes")
+	@Column(name="Important_Notes", columnDefinition = "TEXT")
 	private String importantNotes;
-	@Column(name="Documentation_Visas")
+	@Column(name="Documentation_Visas", columnDefinition = "TEXT")
 	private String documentationVisas;
-	@Column(name="Security")
+	@Column(name="Security", columnDefinition = "TEXT")
 	private String security;
-	@Column(name="Healthcare")
+	@Column(name="Healthcare", columnDefinition = "TEXT")
 	private String healthcare;
-	@Column(name="Local_Currency")
+	@Column(name="Local_Currency", columnDefinition = "TEXT")
 	private String localCurrency;
-	@Column(name="Other_Information")
+	@Column(name="Other_Information", columnDefinition = "TEXT")
 	private String otherInformation;
-	@Column(name="Other_Phones_Interest")
+	@Column(name="Other_Phones_Interest", columnDefinition = "TEXT")
 	private String addressesPhonesInterest;
-	@Column(name="Last_Update")
+	@Column(name="Last_Update", nullable = false)
 	private Date lastUpdate;
 	
 	public TravelRecommendations() {

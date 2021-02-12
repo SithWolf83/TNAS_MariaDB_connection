@@ -17,15 +17,15 @@ public class SpanishEmbassyPhones implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
-	@Column(name="Country_Id")
+	@Column(name="Country_Id", nullable = false)
 	private int countryId;
-	@Column(name="Embassy")
+	@Column(name="Embassy", columnDefinition = "varchar(50)")
 	private boolean embassy;
-	@Column(name="Consulate")
+	@Column(name="Consulate", columnDefinition = "varchar(50)")
 	private boolean consulate;
-	@Column(name="Phone")
+	@Column(name="Phone", columnDefinition = "varchar(50)")
 	private String phone;
-	@Column(name="Direction")
+	@Column(name="Direction", columnDefinition = "varchar(50)")
 	private String direction;
 	
 	public SpanishEmbassyPhones() {

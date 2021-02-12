@@ -18,11 +18,11 @@ public class User implements Serializable {
 	@Column(name="UserId")
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer userId;
-	@Column(name="Username")
+	@Column(name="Username", nullable = false, columnDefinition = "varchar(50)")
 	private String username;
-	@Column(name="Password")
+	@Column(name="Password",nullable = false, columnDefinition = "varchar(50)")
 	private String password;
-	@Column(name="Email")
+	@Column(name="Email", nullable = false, columnDefinition = "varchar(50)")
 	private String email;
 	@Column(name="EU_Citizen")
 	private boolean EU_Citizen;	

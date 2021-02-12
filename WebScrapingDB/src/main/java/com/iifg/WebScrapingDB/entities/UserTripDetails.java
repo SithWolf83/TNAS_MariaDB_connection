@@ -12,22 +12,22 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "USER_TRIP_DETAILS")
-public class UserTravelDetails implements Serializable{
+public class UserTripDetails implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
-	@Column(name="User_Id")
+	@Column(name="User_Id", nullable = false)
 	private int userId;
-	@Column(name="From_Day")
+	@Column(name="From_Day", nullable = false)
 	private Date fromDay;
-	@Column(name="toDay")
+	@Column(name="toDay", nullable = false)
 	private Date toDay;
-	@Column(name="City_Id")
+	@Column(name="City_Id", nullable = false)
 	private int cityId;
 	
-	public UserTravelDetails() {
+	public UserTripDetails() {
 		
 	}
 

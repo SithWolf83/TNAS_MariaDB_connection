@@ -17,25 +17,25 @@ public class TravellerRecommendations implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
-	@Column(name="Environmental_Health_Risks")
+	@Column(name="Environmental_Health_Risks", columnDefinition = "TEXT")
 	private String environHealthRisks;
-	@Column(name="Vaccines_Required")
+	@Column(name="Vaccines_Required", columnDefinition = "TEXT")
 	private String vaccinesRequired;
-	@Column(name="Vaccines_Recommended")
+	@Column(name="Vaccines_Recommended", columnDefinition = "TEXT")
 	private String vaccinesRecommended;
-	@Column(name="Malaria_Prevention")
+	@Column(name="Malaria_Prevention", columnDefinition = "TEXT")
 	private String malariaPrevention;
-	@Column(name="During_The_Trip")
+	@Column(name="During_The_Trip", columnDefinition = "TEXT")
 	private String duringTheTrip;
-	@Column(name="Beware_Of_Water")
+	@Column(name="Beware_Of_Water", columnDefinition = "TEXT")
 	private String bewareOfWater;
-	@Column(name="Beware_Of_Toilets")
+	@Column(name="Beware_Of_Toilets", columnDefinition = "TEXT")
 	private String bewareOfToilets;
-	@Column(name="Protection_Transmitted_Diseases")
+	@Column(name="Protection_Transmitted_Diseases", columnDefinition = "TEXT")
 	private String proTransDiseases;
-	@Column(name="Sexually_Transmitted_Diseases")
+	@Column(name="Sexually_Transmitted_Diseases", columnDefinition = "TEXT")
 	private String sexTransDiseases;
-	@Column(name="Tips_After_The_Trip")
+	@Column(name="Tips_After_The_Trip", columnDefinition = "TEXT")
 	private String tipsAftTrip;
 	
 	public TravellerRecommendations() {

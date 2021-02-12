@@ -18,19 +18,19 @@ public class MeteoAlarm implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
-	@Column(name="Country_Id")
+	@Column(name="Country_Id", nullable = false)
 	private int countryId;
-	@Column(name="City_Id")
+	@Column(name="City_Id", nullable = false)
 	private int cityId;
-	@Column(name="From_Day")
+	@Column(name="From_Day", nullable = false)
 	private Date fromDay;
-	@Column(name="To_Day")
+	@Column(name="To_Day", nullable = false)
 	private Date toDay;
-	@Column(name="Alert_Type")
+	@Column(name="Alert_Type", nullable = false, columnDefinition = "varchar(50)")
 	private String alertType;
-	@Column(name="Alert_Colour")
+	@Column(name="Alert_Colour", nullable = false, columnDefinition = "varchar(50)")
 	private String alertColour;
-	@Column(name="Alert_Message")
+	@Column(name="Alert_Message", nullable = false, columnDefinition = "varchar(50)")
 	private String alertMessage;
 	
 	public MeteoAlarm() {

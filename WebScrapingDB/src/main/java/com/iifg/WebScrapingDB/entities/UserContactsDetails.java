@@ -19,13 +19,13 @@ public class UserContactsDetails implements Serializable{
 	private Integer id;
 	@Column(name="User_Id")
 	private int userId;
-	@Column(name="Contact_Name")
+	@Column(name="Contact_Name", columnDefinition = "varchar(50)")
 	private String contactName;
-	@Column(name="Contact_Surname")
+	@Column(name="Contact_Surname", columnDefinition = "varchar(50)")
 	private String contactSurname;
-	@Column(name="Contact_Email")
+	@Column(name="Contact_Email", columnDefinition = "varchar(50)")
 	private String contactEmail;
-	@Column(name="Contact_Phone")
+	@Column(name="Contact_Phone", columnDefinition = "varchar(50)")
 	private String contactPhone;
 	
 	public UserContactsDetails() {

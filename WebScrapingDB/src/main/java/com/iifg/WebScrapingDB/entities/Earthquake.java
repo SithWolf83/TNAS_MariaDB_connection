@@ -19,21 +19,21 @@ public class Earthquake implements Serializable{
 	@Column(name="Id")
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
-	@Column(name="Country_Id")
+	@Column(name="Country_Id", nullable = false)
 	private int countryId;
-	@Column(name="City_Id")
+	@Column(name="City_Id", nullable = false)
 	private int cityId;
-	@Column(name="Richter_Scale")
+	@Column(name="Richter_Scale", nullable = false)
 	private float richterScale;
-	@Column(name="People_Felt")
+	@Column(name="People_Felt", nullable = false, columnDefinition = "varchar(50)")
 	private String peopleFelt;
-	@Column(name="Date")
+	@Column(name="Date", nullable = false)
 	private Date date;
-	@Column(name="Time")
+	@Column(name="Time", nullable = false, columnDefinition = "varchar(20)")
 	private String time;
-	@Column(name="Location")
+	@Column(name="Location", nullable = false, columnDefinition = "varchar(20)")
 	private String location;
-	@Column(name="Depth")
+	@Column(name="Depth", nullable = false, columnDefinition = "varchar(20)")
 	private String depth;
 	
 	public Earthquake() {
